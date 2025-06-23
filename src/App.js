@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import {useState} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faGear,faHouse } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import {faGear,faHouse } from '@fortawesome/free-solid-svg-icons'
 function App()
 {
   const [city,setCity]=useState("")
@@ -25,9 +25,9 @@ const show=(e)=>{
 }
   return(
   <>
-  <h1>API HANDLING</h1>
-  <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
-  <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
+  <h1>WEATHER APP</h1>
+  {/* <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> */}
+  {/* <FontAwesomeIcon icon={faGear}></FontAwesomeIcon> */}
   <input type="text" value={city} placeholder="enter city" onChange={(e)=>show(e)}></input>
   <input type="button"  onClick={dis} value="weather report"></input>
   {output !==null && output.cod===200 &&
@@ -47,28 +47,3 @@ const show=(e)=>{
 )
 }
 export default App
-/*import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
